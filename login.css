@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    font: 300 1rem/1.5 Arial, Helvetica Neue, sans-serif;
+    margin: 0;
+    min-height: 100%;
+    background-image: url("https://www.iceland-highlights.com/wp-content/uploads/2019/09/northern-lights-iceland-tips.jpg");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#logo{
+    height: 56px;
+    width: 56px;
+}
+.title{
+    margin-top: 8px;
+    color: rgba(247,247,255,.9);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+.align {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.align__item--start {
+    align-self: flex-start;
+}
+.align__item--end {
+    align-self: flex-end;
+}
+.site__logo {
+    margin-bottom: 2rem;
+}
+input {
+    border: 0;
+    font: inherit;
+}
+input::placeholder {
+    color: rgb(179, 183, 205);
+}
+.form__field {
+    margin-bottom: 1rem;
+}
+.btns{
+    height: 54px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 8px;
+    display: flex;
+    padding: 1.5%;
+    margin-bottom: 24px;
+}
+.btns button{
+    width: 100%;
+    background-color: transparent;
+    color: rgba(247, 247, 255, 0.5);
+    
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+.btns button.active{
+    border:1px solid rgb(48, 47, 53);
+    border-radius: 8px;
+    background-color:rgb(48, 47, 53);
+    color: rgba(247, 247, 255, 0.9);
+
+}
+.form{
+    margin-top: 24px;
+}
+.form input {
+    outline: 0;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(225, 224, 232);
+    font-family: Arial, Helvetica-Neue, sans-serif;
+}
+.form input#sign-in{
+    color: #222426;
+    background-color: rgb(255, 223, 83);
+    border-color: rgb(255, 223, 83);
+    margin-top: 30px;
+}
+.form input#sign-in:hover{
+    background-color: rgb(255, 213, 7);
+    border-color: rgb(255, 213, 7);
+    cursor: pointer;
+}
+.form input#sign-up{
+    border: 1px solid rgb(55, 55, 60);
+}
+.form input#sign-up:hover{
+    background-color: rgb(36, 36, 39);
+    cursor: pointer;
+}
+.form input[type="email"], .form input[type="password"] {
+    font-size: 24px;
+    height: 54px;
+    text-align: start;
+    display: inline-block;
+    padding: 4%;
+}
+.form input[type="email"]:focus{
+    border-color: rgb(255, 223, 83);
+}
+.grid {
+    margin: 0 auto;
+    max-width: 360px;
+    /* max-height: 573px; */
+    /* height: 100%; */
+    width: 100%;
+}
+h2 {
+    font-size: 2.75rem;
+    font-weight: 100;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+}
+a {
+    color: #7e8ba3;
+}
+p{
+    color: rgba(247,247,255,.7);
+    font-size: 14px;
+    font-weight: 400;
+    height: 20px;
+    margin-top: 24px;
+}
+.register {
+    background-color: rgb(19, 19, 23);
+    border-radius: 16px;
+    box-shadow: 0 0 250px #000;
+    text-align: center;
+    padding: 32px;
+    height: 573px;
+}
+.register input {
+    border: 2px solid rgb(204, 204, 204);
+    color: rgba(247,247,255,.9);
+    border-radius: 8px;
+    padding: 4px;
+    background-color: transparent;
+    text-align: center;
+    
+}
+
+.social-icons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+.social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 25px;
+    border: 1px solid rgba(211,211,222,.2);
+}
+.social-icon .icon{
+    background-position: 50%;
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+.vk span{
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEuNjY3IDkuNjY3YzAtMy43NzEgMC01LjY1NyAxLjE3MS02LjgyOUM0LjAxIDEuNjY3IDUuODk1IDEuNjY3IDkuNjY3IDEuNjY3aC42NjZjMy43NzIgMCA1LjY1NyAwIDYuODI5IDEuMTcxIDEuMTcxIDEuMTcyIDEuMTcxIDMuMDU4IDEuMTcxIDYuODI5di42NjZjMCAzLjc3MiAwIDUuNjU3LTEuMTcxIDYuODI5LTEuMTcyIDEuMTcxLTMuMDU3IDEuMTcxLTYuODI5IDEuMTcxaC0uNjY2Yy0zLjc3MiAwLTUuNjU3IDAtNi44MjktMS4xNzEtMS4xNzEtMS4xNzItMS4xNzEtMy4wNTctMS4xNzEtNi44Mjl2LS42NjZaIiBmaWxsPSIjMDdGIi8+PHBhdGggZD0iTTEwLjUzNSAxMy42NzRjLTMuNzk5IDAtNS45NjUtMi42MDUtNi4wNTYtNi45MzhoMS45MDNjLjA2MyAzLjE4IDEuNDY1IDQuNTI4IDIuNTc2IDQuODA2VjYuNzM2aDEuNzkyVjkuNDhjMS4wOTctLjExOCAyLjI1LTEuMzY4IDIuNjM5LTIuNzQzaDEuNzkyYy0uMjk5IDEuNjk1LTEuNTQ5IDIuOTQ1LTIuNDM4IDMuNDU4Ljg4OS40MTcgMi4zMTMgMS41MDcgMi44NTQgMy40OGgtMS45NzJjLS40MjQtMS4zMi0xLjQ4LTIuMzQtMi44NzUtMi40OHYyLjQ4aC0uMjE1WiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==");
+}
+.facebook span {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTI0IDEyYzAtNi42MjctNS4zNzMtMTItMTItMTJTMCA1LjM3MyAwIDEyYzAgNS45OSA0LjM4OCAxMC45NTQgMTAuMTI1IDExLjg1NFYxNS40N0g3LjA3OFYxMmgzLjA0N1Y5LjM1NmMwLTMuMDA3IDEuNzkyLTQuNjY4IDQuNTMzLTQuNjY4IDEuMzEyIDAgMi42ODYuMjM0IDIuNjg2LjIzNHYyLjk1M0gxNS44M2MtMS40OTEgMC0xLjk1Ni45MjUtMS45NTYgMS44NzVWMTJoMy4zMjhsLS41MzIgMy40NjloLTIuNzk2djguMzg1QzE5LjYxMiAyMi45NTQgMjQgMTcuOTkgMjQgMTJ6IiBmaWxsPSIjMTg3N0YyIi8+PHBhdGggZD0iTTE2LjY3MSAxNS40NjkgMTcuMjAzIDEyaC0zLjMyOFY5Ljc1YzAtLjk0OS40NjUtMS44NzUgMS45NTYtMS44NzVoMS41MTNWNC45MjJzLTEuMzc0LS4yMzQtMi42ODYtLjIzNGMtMi43NDEgMC00LjUzMyAxLjY2LTQuNTMzIDQuNjY4VjEySDcuMDc4djMuNDY5aDMuMDQ3djguMzg1YTEyLjEzIDEyLjEzIDAgMCAwIDMuNzUgMFYxNS40N2gyLjc5NnoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=");
+}
+.google span {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTUuMzE5IDE0LjUwNC0uODM1IDMuMTE4LTMuMDU0LjA2NUExMS45NDYgMTEuOTQ2IDAgMCAxIDAgMTJjMC0xLjk5LjQ4NC0zLjg2NiAxLjM0Mi01LjUxOWwyLjcxOS40OTkgMS4xOSAyLjcwMkE3LjEzMyA3LjEzMyAwIDAgMCA0Ljg2OCAxMmMwIC44ODEuMTYgMS43MjUuNDUyIDIuNTA0eiIgZmlsbD0iI0ZCQkIwMCIvPjxwYXRoIGQ9Ik0yMy43OSA5Ljc1OGExMi4wMjggMTIuMDI4IDAgMCAxLS4wNTMgNC43NDcgMTEuOTk4IDExLjk5OCAwIDAgMS00LjIyNSA2Ljg1M2wtMy40MjQtLjE3NS0uNDg1LTMuMDI1YTcuMTUyIDcuMTUyIDAgMCAwIDMuMDc3LTMuNjUyaC02LjQxNlY5Ljc1OEgyMy43OXoiIGZpbGw9IiM1MThFRjgiLz48cGF0aCBkPSJNMTkuNTEyIDIxLjM1N0ExMS45NSAxMS45NSAwIDAgMSAxMiAyNGMtNC41NyAwLTguNTQzLTIuNTU0LTEwLjU3LTYuMzEzbDMuODg5LTMuMTg0YTcuMTM1IDcuMTM1IDAgMCAwIDEwLjI4NCAzLjY1NGwzLjkwOSAzLjJ6IiBmaWxsPSIjMjhCNDQ2Ii8+PHBhdGggZD0ibTE5LjY2IDIuNzYzLTMuODg4IDMuMTgyYTcuMTM3IDcuMTM3IDAgMCAwLTEwLjUyIDMuNzM2bC0zLjkxLTMuMkExMS45OTggMTEuOTk4IDAgMCAxIDEyIDBhMTEuOTUgMTEuOTUgMCAwIDEgNy42NiAyLjc2M3oiIGZpbGw9IiNGMTQzMzYiLz48L3N2Zz4=");
+}
+.qr{
+    width: auto;
+    border: none;
+}
+.qr .icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='none' height='24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 4h4v4H4zM4 16h4v4H4zM16 4h4v4h-4z' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M11 3h2v6h-2z' fill='%23000'/%3E%3Cg fill='%23fff'%3E%3Cpath d='M11 3h2v6h-2zM19 15h2v6h-2zM11 15h2v6h-2zM23.015 10.923v2.06l-21.999.006V10.93zM15 15h2v2h-2z'/%3E%3Cpath d='M11 19h6v2h-6z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.qr .name {
+    color: #f7f7ff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.options span {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='none' height='4' width='18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M2 3.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm14 0a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zM10.75 2a1.75 1.75 0 1 1-3.5 0 1.75 1.75 0 0 1 3.5 0z' fill='%2385858b' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
