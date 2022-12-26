@@ -1,0 +1,136 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 70px;
+    margin: 0 auto;
+}
+.logo{
+    background-image: url("https://yastatic.net/s3/home-static/_/I/L/FmOIJ8woHVcXPynY5R8UCSfME.svg");
+    width: 86px;
+    height: 35px;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+}
+.navbar{
+    flex: auto;
+    display: flex;
+    justify-content: start;
+    width: auto;
+    font-size: 14px;
+    color: #2557a9;
+    font-weight: 500;
+}
+.active{
+    color: #000;
+}
+.navbar li{
+    margin-right: 32px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+hr{
+    background-color: rgba(226, 227, 228, 0.9);
+    height: 1px;
+    border: none;
+}
+.services{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+.services .container{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+.services .container a{
+    padding: 18px 20px 28px 8px;
+}
+.services span{
+    display: block;
+    white-space: normal;
+    color: #000;
+    font-size: 13px;
+}
+.services .title{
+    font-size: 20px;
+    color: #2557a9;
+}
+.service-icon{
+    width: 54px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-right: 15px;
+}
+.search-big{
+    background-image: url('https://yastatic.net/s3/home/services/all/svg/search1.svg');
+}
+.images-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/images0.svg");
+}
+.video-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/video0.svg");
+}
+.weather-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/pogoda.svg");
+}
+.map-big{
+    background-image: url('https://yastatic.net/s3/home/services/all/svg/maps2.svg');
+}
+.mail-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/mail_1.svg");
+}
+.market-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/market_new2022.svg");
+}
+.browser-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/yabrowser0.svg");
+}
+.cloud-big{
+    background-image: url('https://yastatic.net/s3/home/services/all/svg/disk0.svg');
+}
+.home-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/realty0.svg");
+}
+.auto-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/autoru0.svg");
+}
+.travel-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/travel2.svg");
+}
+.movie-big{
+    background-image: url('https://yastatic.net/s3/home/services/all/svg/kinopoisk_2021_v2.svg');
+}
+.uslugi-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/uslugi2.svg");
+}
+.messenger-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/messenger.svg");
+}
+.telemost-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/telemost1.svg");
+}
+.yandex-pay-big{
+    background-image: url('https://yastatic.net/s3/home/services/all/svg/pay.svg');
+}
+.help-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/need_help1.svg");
+}
+.yandexid-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/ID_personal.svg");
+}
+.food-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/eda_new.svg");
+}
+.delivery-big{
+    background-image: url("https://yastatic.net/s3/home/services/all/svg/delivery_club.svg");
+}
