@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <?php 
+    require('../connection.php');
+    session_start();
+
+    if (isset($_POST['login-submit'])) {
+      $username = stripslashes($_REQUEST['username']);
+      $username = mysqli_real_escape_string($conn, $username);
+      $_SESSION['username'] = $username;
+      header("Location: http://localhost/yandex/login/login-con.php");
+    }
+    ?>
 </head>
 <body class="align">
     <div class="grid align__item">
@@ -24,10 +35,14 @@
                 </div>
 
                 <div class="form__field">
-                    <input type="email" placeholder="Логин или email">
+                    <input type="email" placeholder="Логин или email" name="username">
+                </div>
+
+                <div class="field-link">
+                    <a href="https://passport.yandex.kz/restoration?retpath=https%3A%2F%2Fpassport.yandex.kz%2F&&process_uuid=67651b49-8e4e-48d6-81a6-057e55ae6b48" weight="medium" class="link">Не помню</a>
                 </div>
                 <div class="form__field">
-                    <input type="submit" id="sign-in" value="Войти">
+                    <input type="submit" id="sign-in" value="Войти" name="login-submit">
                 </div>
                 <div class="form__field">
                     <input type="submit" id="sign-up" value="Создать ID">

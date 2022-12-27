@@ -10,10 +10,13 @@ CREATE TABLE `user` (
   `user_phone` varchar(20) NOT NULL,
   `user_address` varchar(100) NOT NULL,
   `has_subscr` int(1) NOT NULL DEFAULT 0,
-  `user_card_no` int(12),
+  `user_card_no` varchar(16),
   `subscr_end_date` timestamp,
    PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `user`(`user_name`, `user_email`, `user_password`, `user_phone`, `user_address`, `has_subscr`, `user_card_no`) VALUES 
+('admin', 'admin@gmail.com', 'admin', '777777', 'address', 0, '1111222233334444');
 
 CREATE TABLE `categories` (
   `category_id` int(11) NOT NULL AUTO_INCREMENT,
