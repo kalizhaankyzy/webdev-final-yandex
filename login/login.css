@@ -78,7 +78,7 @@ input::placeholder {
 .form{
     margin-top: 24px;
 }
-.form input {
+.form input, .form .auth_btn {
     outline: 0;
     padding: 0.5rem 1rem;
     width: 100%;
@@ -99,21 +99,21 @@ input::placeholder {
     border-color: rgb(255, 213, 7);
     cursor: pointer;
 }
-.form input#sign-up{
+.form .auth_btn{
     border: 1px solid rgb(55, 55, 60);
 }
-.form input#sign-up:hover{
+.form .auth_btn:hover{
     background-color: rgb(36, 36, 39);
     cursor: pointer;
 }
-.form input[type="email"], .form input[type="password"] {
+.form input[type="email"], .form input[type="password"], .form input[type="text"] {
     font-size: 24px;
     height: 54px;
     text-align: start;
     display: inline-block;
     padding: 4%;
 }
-.form input[type="email"]:focus, .form input[type="password"]:focus{
+.form input[type="email"]:focus, .form input[type="password"]:focus, .form input[type="text"]:focus{
     border-color: rgb(255, 223, 83);
 }
 .field-link{

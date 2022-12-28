@@ -8,13 +8,15 @@ include 'catalog.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
     <link rel="stylesheet" href="css/itc-slider.css">
     <link rel="stylesheet" href="css/itsslider.css">
     <link rel="stylesheet" href="css/content-main.css">
     <script src="js/itc-slider.js"></script>
-    
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 <body>
     <div class="containermain">

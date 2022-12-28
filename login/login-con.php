@@ -22,8 +22,10 @@
         if ($rows == 1) {
             $error = 0;
             $_SESSION['login'] = 1;
-            $_SESSION['user_id'] = $rows['user_id'];
-            header("Location: http://localhost/yandex/index.php");
+            while($row = $result->fetch_assoc()){
+                $_SESSION['user_id'] = $row['user_id'];
+            }
+            header("Location: http://localhost/yandex/all_services/all_services.html");
         } 
         else {
             $error = 1;
@@ -49,7 +51,7 @@
                 </div>
 
                 <div class="form__field ">
-                    <input class="<?php if($error ==1){echo 'error-div';}?>" type="password" placeholder="Введите пароль" name="password">
+                    <input class="<?php if($error ==1){echo 'error-div';}?>" type="password" placeholder="Введите пароль" name="password" required>
                 </div>
                 <?php if($error ==1){ ?>
                 <div class="field-link" style="margin-bottom: 15px;">
@@ -63,13 +65,9 @@
                 <div class="form__field">
                     <input type="submit" id="sign-in" value="Войти" name="login-submit">
                 </div>
-                <!-- <div class="form__field"> -->
-                    <div class="social-icon qr qr-form" style="width: auto;">
-                        <span class="icon"></span>
-                        <span class="name"> Войти по QR-коду</span></div>
-
-                    <!-- <input type="submit" id="sign-up" value="Войти по QR-коду"> -->
-                <!-- </div> -->
+                <div class="social-icon qr qr-form" style="width: auto;">
+                    <span class="icon"></span>
+                    <span class="name"> Войти по QR-коду</span></div>
             </form>
         </div>
 

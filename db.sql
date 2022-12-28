@@ -15,6 +15,8 @@ CREATE TABLE `user` (
    PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+ALTER TABLE `user` ADD COLUMN `balance` INT;
+
 INSERT INTO `user`(`user_name`, `user_email`, `user_password`, `user_phone`, `user_address`, `has_subscr`, `user_card_no`) VALUES 
 ('admin', 'admin@gmail.com', 'admin', '777777', 'address', 0, '1111222233334444');
 
@@ -213,8 +215,8 @@ CREATE TABLE `order_details` (
     `detail_id` int(11) NOT NULL AUTO_INCREMENT,
     `detail_order_id` int(11) NOT NULL,
     `detail_prod_id` int(11) NOT NULL,
-    `detail_name` varchar(250) NOT NULL,
-    `detail_price` float NOT NULL,
+    -- `detail_name` varchar(250) NOT NULL,
+    -- `detail_price` float NOT NULL,
     `detail_quantity` int(11) NOT NULL,
     `detail_payment_id` int(11) NOT NULL,
      PRIMARY KEY (`detail_id`),
@@ -256,20 +258,74 @@ CREATE TABLE flight_details(
     FOREIGN KEY (`jet_id`) REFERENCES `jet`(`jet_id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+
 CREATE TABLE ticket(
     `pnr` INT(8) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `rsrv_date` DATE NOT NULL,
-    `class` VARCHAR(10) NOT NULL,
-    `booking_status` VARCHAR(20),
-    `passengers_num` int(5),
-    `cust_id` INT(8),
-    `flight_no` VARCHAR(20),
-    `jet_id` VARCHAR(20),
+    `date` DATE NOT NULL DEFAULT NOW(),
+    `user_id` int(11) NOT NULL,
+    `pass_id` int(11) NOT NULL,
+    `passengers_num` int(2),
+    `tour_id` INT(11) NOT NULL,
+    `from` VARCHAR(100),
+    `total_price` INT NOT NULL,
     `payment_id` int(11) NOT NULL,
-    FOREIGN KEY (`flight_no`) REFERENCES `flight_details`(`flight_no`) ON DELETE SET NULL ON UPDATE CASCADE,
-    FOREIGN KEY (`cust_id`) REFERENCES `user`(`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (`jet_id`) REFERENCES `jet`(`jet_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`),
+    FOREIGN KEY (`pass_id`) REFERENCES `passenger`(`pass_id`),
+    FOREIGN KEY (`tour_id`) REFERENCES `tour`(`tour_id`),
     FOREIGN KEY (`payment_id`) REFERENCES `payments`(`payment_id`)
 );
+CREATE TABLE `passenger` (
+  `pass_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `pass_surname` varchar(100) NOT NULL,
+  `pass_name` varchar(100) NOT NULL,
+  `pass_gender` varchar(5) NOT NULL,
+  `pass_birth_date` DATE NOT NULL,
+  `pass_nationality` varchar(100) NOT NULL,
+  `pass_id_no` int NOT NULL,
+  `passport_end_date` timestamp,
+   PRIMARY KEY (`pass_id`),
+   FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `tour` (
+    `tour_id` int(11) NOT NULL AUTO_INCREMENT,
+    `to` varchar(100) NOT NULL,
+    `address` varchar(200) NOT NULL,
+    `hotel_name` varchar(100) NOT NULL,
+    `price` int NOT NULL,
+     PRIMARY KEY (`tour_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `tour_options` (
+    `tour_option_id` int(11) NOT NULL AUTO_INCREMENT,
+    `option_id` int(11) NOT NULL,
+    `tour_id` int(11) NOT NULL
+    PRIMARY KEY (`tour_option_id`),
+    FOREIGN KEY (`option_id`) REFERENCES `options_t`(`option_id`),
+    FOREIGN KEY (`tour_id`) REFERENCES `tour`(`tour_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `options_t` (
+    `option_id` int(11) NOT NULL AUTO_INCREMENT,
+    `option_name` varchar(50) NOT NULL,
+    PRIMARY KEY (`option_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+
+INSERT INTO `tour`(`to`, `address`, `hotel_name`, `price`) VALUES 
+('Египет', 'Шарм-эль-Шейх, Египет', 'Amar Sina Hotel', 177171),
+('Египет', 'Хургада (город), Хургада, Египет', 'Seagul Beach Resort', 207142),
+('Египет', 'Сома Бей, Хургада, Египет', 'Solimar Soma Beach', 260080),
+('Турция', 'Махмутлар, Алания, Турция', 'Utopia World Hotel', 109027),
+('Турция', 'Конаклы, Алания, Турция', 'Senza Garden Holiday Club', 90558),
+('Турция', 'Чамьюва, Кемер, Турция', 'L`Oceanica Beach Resort Hotel', 99430),
+('Мальдивы', 'Лааму Атолл, Мальдивы', 'Rahaa Resort', 223800),
+('Мальдивы', 'Северный Ари Атолл, Ари Атолл, Мальдивы', 'Ellaidhoo Maldives By Cinnamon', 255353),
+('Мальдивы', 'Баа Атолл, Мальдивы', 'Reethi Beach Resort', 338415);
+
+INSERT INTO `options_t`(`option_name`) VALUES ('Документы сразу'), ('Бассейн с подогревом'), ('Моментальное подтверждение'), ('Собственный пляж'), ('Обновлен в 2021 году'), ('Открылся в 2020 году'), ('Входит в топ-5 отелей Анталий'), ('Аквапарк'), ('Обновлен в 2020 году');
+
+INSERT INTO `tour_options`(`option_id`, `tour_id`) VALUES
+(1, 1), (2, 1), (3, 1), (1, 2), (2, 2), (4, 2), (5, 2), (3, 2), (1, 3), (2, 3), (6, 3), (3, 3);

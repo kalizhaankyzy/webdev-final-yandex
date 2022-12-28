@@ -1,0 +1,204 @@
+body{
+    font-family: sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.headerIMG{
+    padding-left: 120px;
+    padding-right: 200px;
+    margin-right: -10%;
+    margin-top: -4%;
+}
+
+.headerContent{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+}
+
+.headerContent p{
+    padding-right: 20px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.headerContent i{
+    padding-right: 5px;
+    font-size: 18px;
+}
+
+.signup {
+    color: black;
+    font-size: 15px;
+    border: 1px solid rgb(218, 222, 224);
+    background-color: rgb(218, 222, 224);
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.plus {
+    color: white;
+    font-size: 15px;
+    border: 1px solid rgb(236, 232, 232);
+    border-radius: 8px;
+    background: linear-gradient(to top right, orange, rgb(205, 70, 205), blue);
+}
+
+
+.headerInfo{
+    display: flex;
+    padding-right: 100px;
+}
+
+.headerInfo p{
+    padding-left: 10px;
+    font-weight: 700;
+    color: rgb(167, 164, 164);
+}
+
+#trip{
+    font-size: 20px;
+    padding-left: 120px;
+    padding-top: 20px;
+}
+
+#passanger{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.chose{
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.chose a{
+    text-decoration: none;
+    color: black;
+}
+
+
+body{
+    font-family: sans-serif;
+    background-color: #f3f3f3;
+}
+
+
+
+h1{
+    padding-top: 80px;
+    padding-left: 150px;
+    font-size: 30px;
+}
+
+
+.fill-info{
+    width: 100%;
+    margin-right: 50px;
+    padding-left: 120px;
+    padding-bottom: 3%;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.adult-ticket{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 0px 100px 0px 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.searchBar form{
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+    background-color: black;
+    border-radius: 0px 0px 10px 10px;
+    justify-content: center;
+}
+
+form .search{
+    display: flex;
+    justify-content: center;
+}
+
+.form-control{
+    padding: 15px 1px;
+    background-color: white;
+}
+
+select.form-control{
+    font-size: 15px;
+    text-align: left;
+}
+
+#form-start{
+    border-radius: 5px 0px 0px 5px;
+}
+
+#form-end{
+    border-radius: 0px 5px 5px 0px;
+}
+
+.searchBar label{
+    font-size: 15px;
+    padding-bottom: 5px;
+    
+}
+
+
+.searchBar-trip{
+    padding-left: 120px;
+}
+
+
+.searchBar-trip form{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    padding: 25px 0;
+    margin-top: 60px;
+    background-color: rgb(23, 24, 26);
+    border-radius: 10px;
+}
+
+form .search-trip{
+    display: flex;
+    justify-content: center;
+}
+
+.form-control-trip{
+    padding: 15px 10px;
+    background-color: white;
+}
+
+select.form-control-trip{
+    font-size: 20px;
+    text-align: left;
+}
+
+#form-start-trip{
+    border-radius: 5px 0px 0px 5px;
+}
+
+#form-end-trip{
+    border-radius: 0px 5px 5px 0px;
+}
+
+.control-date-trip{
+    display: flex;
+    justify-content: space-between;
+}
+

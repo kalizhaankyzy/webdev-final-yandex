@@ -95,7 +95,7 @@ header  nav.nav .icon-th-list {
 }
 
 header a  {
-    color: #676666;
+    color: black;
 }
 
 header a:hover, header a:focus{
@@ -391,7 +391,7 @@ header .nav.dropdown .dropdown-menu .level2 li a:hover {
 *************************************************************/
 
 .slider{
-    background-color:#d8b889;
+    background-color:#fc0;
     text-align: center;
 }
 
@@ -985,7 +985,6 @@ footer .divider{
 *************************************************************/
 
 .hwrap {
-    
     box-shadow: 0 4px 9px 1px #cecece;
 }
 
@@ -2636,28 +2635,25 @@ li{
     margin-top: 5px;
     height: 60px;
     
-    
 }
 .catalogsearch input[type="text"]{
     width: 500px;
+    border:solid 2px #fc0;
+    border-radius: 10px 0px 0px 10px;
     
+     /*border: none; <-- This thing here */
     
-    border: none; /* <-- This thing here */
-    border:solid 2px rgb(255, 165, 0);
-    border-radius: 5px,0px,5px,0px;
 }
 .catalogsearch input[type="submit"]{
     
-    
-    
-    background-color: rgb(255, 165, 0);
-    border: none; /* <-- This thing here */
-    border:solid 1px rgb(255, 165, 0);
-    border-radius: 0px,5px,5px,0px;
+    padding-bottom: 15px;
+    background-color: #fc0;
+     /*border: none; <-- This thing here */
+    border:solid 1px #fc0;
+    border-radius: 0px 10px 10px 0px;
     font-weight: bold;
     font-size: 20px;
     height: 60px;
-    
     
 }
 
@@ -2692,7 +2688,7 @@ div.yandexplus{
     
     text-align: center;
     width: 100px;
-    background-color: rgb(135, 135, 135);
+    background-color: rgb(220, 213, 213);
     border-radius: 5px;
     font-size: 16px;
     padding-left: 10px;
@@ -2709,8 +2705,8 @@ div.yandexplus{
 .containerside{
     display: grid;
     width: fit-content;
-    margin-left: 78%;
-    margin-top: -11%;
+    margin-left: 83%;
+    margin-top: 3%;
     justify-content: end;
     grid-template-columns: 1fr;
     grid-column-gap: 20px;
@@ -2723,13 +2719,10 @@ div.yandexplus{
 .containerleft{
     position: relative;
     display: block;
-    
-    margin: 20px;
-    margin-top: -40%;
-    margin-left: 9.1%;
+    margin-top: -60%;
 }
 .containerleft img{
-    width: 70px;
+    width: 50px;
     height: 120px;
 }
 .containerleft-1
@@ -2739,16 +2732,16 @@ div.yandexplus{
     align-items: center;
     text-align: center;
     
-    margin-left: 50px;
+    margin-left: 30px;
     padding-top: 16px;
     
     color: #000;
     font-size: 20px;
     font-weight: bold;
-    width: 200px;
+    width: 194px;
     background-color: #ededed;
     border-radius: 20px;
-    height: 200px;
+    height: 194px;
 }
 .containerleft h1{
     margin-left: 3%;
@@ -2770,11 +2763,10 @@ div.yandexplus{
 }
 .containerfooter{
     justify-items: center;
-    margin-top: 500px
+    margin-top: 700px
 }
 .col-lg-2 {
     
-    margin-left: 50px;
     margin-right: 50px;
 }
 .col-lg-2 h2{

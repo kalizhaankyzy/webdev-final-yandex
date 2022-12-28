@@ -1,0 +1,231 @@
+body{
+    font-family: sans-serif;
+    background-color: #f3f3f3;
+}
+
+header{
+    background-color: rgb(23, 24, 26);
+    color: white;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 64px;
+    /* justify-content: space-between; */
+}
+
+.headerIMG{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+#tour{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 603px;
+    padding: 0px 15px;
+    /* margin-top: 15px; */
+    /* background-color: white; */
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#tour p{
+    font-size: 17px;
+}
+
+#tour i{
+    padding-right: 5px;
+}
+
+.headerContent{
+    display: flex;
+    /* padding: 0 67px; */
+}
+
+.headerContent a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.headerContent p{
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.headerContent i{
+    font-size: 20px;
+    /* padding-top: 5px; */
+    margin-left: 55px;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+}
+.searchBar form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 60px;
+    padding-bottom: 15px;
+    background-color: rgb(23, 24, 26);
+}
+
+form .search{
+    display: flex;
+    justify-content: center;
+}
+
+.form-control{
+    padding: 15px 50px;
+}
+
+select.form-control{
+    font-size: 20px;
+    text-align: left;
+}
+
+#form-start{
+    border-radius: 5px 0px 0px 5px;
+}
+
+#form-end{
+    border-radius: 0px 5px 5px 0px;
+}
+
+.control-date{
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-btn{
+    background-color: rgb(255, 221, 0);
+    border: 1px solid rgb(255, 221, 0);
+    font-size: 21px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 30px;
+    border-radius: 3px;
+}
+
+.filter{
+    padding-top: 150px;
+    margin-right: 1200px;
+    
+}
+
+.filter-info{
+    font-size: 15px;
+    
+}
+
+.content-block{
+    color: grey;
+}
+
+.egypt{
+    position: absolute;
+    top: 0;
+    padding-left: 300px;
+    padding-top: 150px;
+
+}
+
+.hotel{
+    display: flex;
+    background-color: white;
+    padding-right: 200px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.hotel-info{
+    padding-left: 20px;
+    width: 100%;
+}
+
+.hotel-info p{
+    padding: 5px;
+    border-radius: 4px;
+
+}
+
+.hotel-info h3{
+    padding-bottom: 20px;
+    
+}
+
+.hotelImg img{
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+.turkey{
+    position: absolute;
+    top: 0;
+    padding-left: 300px;
+    padding-top: 1400px;
+
+}
+
+.maldives{
+    position: absolute;
+    top: 0;
+    padding-left: 300px;
+    padding-top: 2700px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex h2{
+    width: 50%;
+}
+.flex button{
+    background: linear-gradient(180deg, #e6c12e, #ea8817);
+    border: 1px solid #e6c12e;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* margin: 20px 0; */
+    padding: 15px 15px;
+    /* border: none; */
+    box-shadow: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    outline: none !important;
+    /* margin-left: 5%; */
+}
+.flex button::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+    box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0), 0 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.flex button:hover{
+    cursor: pointer;
+}
+.flex button:hover::after {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.2);
+}

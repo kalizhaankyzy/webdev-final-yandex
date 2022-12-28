@@ -1,0 +1,154 @@
+body{
+    font-family: sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.headerIMG{
+    padding-left: 120px;
+    padding-right: 200px;
+}
+
+.headerContent{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.headerContent p{
+    padding-right: 20px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.headerContent i{
+    padding-right: 5px;
+    font-size: 18px;
+}
+
+.signup {
+    color: black;
+    font-size: 15px;
+    border: 1px solid rgb(218, 222, 224);
+    background-color: rgb(218, 222, 224);
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.plus {
+    color: white;
+    font-size: 15px;
+    border: 1px solid rgb(236, 232, 232);
+    border-radius: 8px;
+    background: linear-gradient(to top right, orange, rgb(205, 70, 205), blue);
+}
+
+.sub-header-container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 120px;
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+.sub-header-buttons-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sub-header-buttons-container p{
+    padding-right: 50px;
+}
+
+.sub-header-buttons-container a{
+    text-decoration: none;
+    color: black;
+}
+
+.sub-header-buttons-container i{
+    padding-right: 10px;
+}
+
+.parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+.child{
+    margin-left: 70px;
+    margin-right: 70px;
+
+} 
+
+.child p{
+    font-size: 18px;
+    text-align: center;
+}
+
+.options{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 30px;
+    padding: 0px 400px;
+    padding-top: 50px;
+}
+
+.parentSecond{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+
+}
+
+.childSecond{
+    padding: 0px 30px;
+    font-family: sans-serif;
+}
+
+.childSecond img{
+    border-radius: 15px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(242, 239, 239);
+    margin: 150px 170px 0px 170px;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 150px 50px 150px;
+    font-size: 14px;
+}
+
+.footer a{
+    display: flex;
+    justify-content: left;
+    text-decoration: none;
+    color: rgb(60, 59, 59);
+}
+
+hr{
+    margin: 200px 140px 0px 140px;
+}
+
+.foot-end{
+    font-size: 14px;
+    padding-left: 150px;
+}

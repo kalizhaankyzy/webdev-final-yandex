@@ -17,6 +17,10 @@
       $_SESSION['username'] = $username;
       header("Location: http://localhost/yandex/login/login-con.php");
     }
+
+    if (isset($_POST['auth-submit'])) {
+      header("Location: http://localhost/yandex/login/auth.php");
+    }
     ?>
 </head>
 <body class="align">
@@ -35,7 +39,7 @@
                 </div>
 
                 <div class="form__field">
-                    <input type="email" placeholder="Логин или email" name="username">
+                    <input type="email" placeholder="Логин или email" name="username" required>
                 </div>
 
                 <div class="field-link">
@@ -45,7 +49,8 @@
                     <input type="submit" id="sign-in" value="Войти" name="login-submit">
                 </div>
                 <div class="form__field">
-                    <input type="submit" id="sign-up" value="Создать ID">
+                    <a href="http://localhost/yandex/login/auth.php">Создать ID</a>
+                    <!-- <input type="submit" id="sign-up" value="Создать ID" name="auth-submit"> -->
                 </div>
             </form>
 

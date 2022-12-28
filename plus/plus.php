@@ -6,6 +6,23 @@
         <link rel="stylesheet" href="plus.css">
         <?php
         session_start();
+        require('../connection.php');
+
+        $user_id = $_SESSION['user_id'];
+        $query = "SELECT `has_subscr`, `balance` FROM `user` WHERE `user_id`= $user_id;";
+        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+        $rows = mysqli_num_rows($result);
+
+        $hasPlus = false;
+        $user_balance = 0;
+        if($rows == 1){
+            while($row = $result->fetch_assoc()){
+                if($row['has_subscr'] == 1){
+                    $hasPlus = true;
+                }
+                $user_balance = $row['balance'];
+            }
+        }
         ?>
     </head>
     <body style="background-color:rgb(241, 243, 245)">
@@ -29,15 +46,35 @@
                 </div>
                 <div id="header-portal"></div>
                     <div style="right: 0; display: flex; position: absolute; align-items: center;">
+                    <?php
+                    if($hasPlus == true){
+
+                    ?>
+                    <div style="margin-right: 15px;">
+                        <a href="" class="menu">
+                            <span class="menu-text">Баланс: <?php echo $user_balance ?> KZT</span>
+                        </a>
+                    </div>
+                    <?php
+                    } 
+                    ?>
+                    
                     <div>
                         <a href="" class="menu">
                             <span class="menu-text">Меню</span>
                         </a>
                     </div>
                     <div>
-                        <a href="../login/login.php" class="login">
-                            <span class="login-text">Войти</span>
-                        </a>
+                        <?php if(isset($_SESSION['login']) && $_SESSION['login']==1){ ?>
+                            <a href="plus.php?logout=true" class="login"><span class="login-text">Выйти</span></a>
+                        <?php   } 
+                        if (isset($_GET['logout'])) {
+                            $_SESSION['login']=0;
+                        }
+                        ?>
+                        <?php if(empty($_SESSION['login']) || $_SESSION['login']==0){ ?>
+                            <a href="http://localhost/yandex/login/login.php" class="login"><span class="login-text">Войти</span></a>
+                        <?php   } ?>
                     </div>
                 </div>
             </div>
@@ -55,7 +92,7 @@
                                         <div>
                                             <div class="pay-disclaimer-button">
                                                 <div class="pay-disclaimer-button__inner"><a class="pay-disclaimer-link" 
-                                                    href="<?php if($_SESSION['login'] == 1) {echo 'http://localhost/yandex/all_services/all_services.html';} else {echo 'http://localhost/yandex/login/login.php';}?>">
+                                                    href="<?php if(isset($_SESSION['login']) && $_SESSION['login'] == 1) {echo 'http://localhost/yandex/plus/payment.php';} else {echo 'http://localhost/yandex/login/login.php';}?>">
                                                     <div class="ui-button__text">
                                                         <span class="ui-button__text-primary">
                                                             <span>Бесплатно до весны</span></span></div></a></div>
