@@ -106,9 +106,9 @@
                                             
                                             <ul>
                                                 <a href="index.html">Смартфоны и гаджеты</a>
-                                                <li><a href="">Смартфоны</a></li>
-                                                <li><a href="">Умные часи и браслеты</a></li>
-                                                <li><a href="">Наушники и гарнитуры</a></li>
+                                                <li><a href="category_smartphones.php">Смартфоны</a></li>
+                                                <li><a href="category_watches.php">Умные часи и браслеты</a></li>
+                                                <li><a href="category_headphones.php">Наушники и гарнитуры</a></li>
                                                 <li><a href="">Кнопочные телефоны</a></li>
 
                                             </ul>

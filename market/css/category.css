@@ -1,0 +1,88 @@
+.category{
+    
+    width: 1200px;
+    height: fit-content;
+    
+    
+    background-color: rgb(255, 255, 255);
+    margin-left: 445px;
+    margin-top: 50px;
+}
+.category h1{
+    color: black;
+}
+.category a{
+   
+}
+.category a:hover{
+    text-decoration: none;
+    opacity: 0.9;
+}
+.category-object{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 5px;
+    margin-right: 150px;
+    height: max-content;
+    padding-bottom: 20px;
+}
+.category-object-1 img{
+    width: 180px;
+    height: 200px;
+}
+.category-object-2{
+    width: 450px;
+    justify-content: left;
+    color: black;
+}
+.category-object-2 h3{
+    align-content: space-around;
+    height: 75 px;
+    color: rgb(0, 157, 255);
+}
+.category-object-3{
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    
+}
+.category-object-3 h1{
+    font-size: 30px;
+}
+.like_product{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    width: 100px;
+    height: auto;
+    padding: 10px;
+    background-color: rgb(196, 196, 196);
+    border-radius: 7px;
+    font-size: 15px;
+
+}
+#otziv{
+    color: rgb(109, 109, 109);
+}
+input[type="submit"]{
+    background-color: rgb(255, 166, 0);
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: bold;
+    border: 0px;
+    margin-top: 20px ;
+}
+form{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+form h1{
+
+    font-size: 20px;
+}
