@@ -22,6 +22,12 @@
         $result = mysqli_query($conn, $query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
 
+        if(isset($_POST['submit-prod'])){
+                // echo $_REQUEST['prod_id'];
+                $_SESSION['prod_id'] = $_REQUEST['prod_id'];
+                // header("Location: http://localhost/yandex/market/product_details/product_details.php");
+        }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,8 +39,6 @@
     <title>Category</title>
 </head>
 <body>
-
-
         <div class="category">
                  <h1>
                         Смартфоны Алматы
@@ -78,16 +82,16 @@
                         if($row['prod_id']==1||$row['prod_id']==2||$row['prod_id']==3){
                 ?>
                 <div class="category-object">
+                        <form action="" method="POST">
                         <div class="category-object-1">
                                 <a href="">
-                                        <img src="images/products/phones/iphone-14.PNG" alt="">
+                                        <img src="<?php echo $row['prod_img'];?>" alt="">
                                 </a>
-                                
                         </div>
                         <div class="category-object-2">
-                                <a href="">
-                                <h3><?php echo $row['prod_name'];?></h3>
-                                </a>
+                                <button type="submit" name="submit-prod" style="background: transparent;border: none;color: rgb(0, 157, 255);font-size: 24px;width: 100%;font-weight: 500;line-height: 1.1;text-align: start;padding: 0;margin-bottom: 15px;"> 
+                                <?php echo $row['prod_name'];?></button>
+                                <input name="prod_id" value=<?php echo $row['prod_id'] ?> hidden>
                                 <span id="otziv">393 отзыва <br></span>
                                 
                                 <span>
@@ -110,6 +114,7 @@
                                         качество фотографий, мощный процессор
                                 </span>
                         </div>
+                        </form>
                         <div class="category-object-3">
                                 <h1>
                                         <?php echo $row['prod_price']." Тенге";?>

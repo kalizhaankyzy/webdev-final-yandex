@@ -80,7 +80,7 @@
                 <div class="category-object">
                         <div class="category-object-1">
                                 <a href="">
-                                        <img src="images/products/phones/iphone-14.PNG" alt="">
+                                        <img src="<?php echo $row['prod_img'];?>" alt="">
                                 </a>
                                 
                         </div>

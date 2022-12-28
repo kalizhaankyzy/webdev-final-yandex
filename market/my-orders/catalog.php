@@ -68,15 +68,15 @@
                                         <a href=""><p>Скидки</p></a>
                                     </ul>
                                     <ul>
-                                        <a href="index.html">Электроника</a>
-                                        <li><a href="">Смартфоны</a></li>
-                                        <li><a href="">Умные часи и браслеты</a></li>
-                                        <li><a href="">Наушники и гарнитуры</a></li>
-                                        <li><a href="">Портативная акустика</a></li>
+                                        <a >Смартфоны и гаджеты</a>
+                                        <li><a href="http://localhost/yandex/market/category_smartphones.php">Смартфоны</a></li>
+                                        <li><a href="http://localhost/yandex/market/category_watches.php">Умные часы и браслеты</a></li>
+                                        <li><a href="http://localhost/yandex/market/category_headphones.php">Наушники и гарнитуры</a></li>
+                                        <li><a href="">Кнопочные телефоны</a></li>
 
                                     </ul>
                                     <ul>
-                                        <a href="index.html">Строительство и ремонт</a>
+                                        <a>Строительство и ремонт</a>
                                         <li><a href="">Шуруповерты</a></li>
                                         <li><a href="">Перфораторы</a></li>
                                         <li><a href="">Смесители</a></li>
@@ -84,7 +84,7 @@
 
                                     </ul>
                                     <ul>
-                                        <a href="index.html">Товары для дома</a>
+                                        <a>Товары для дома</a>
                                         <li><a href="">Компьютерные кресла</a></li>
                                         <li><a href="">Люстры</a></li>
                                         <li><a href="">Диваны и кушетки</a></li>

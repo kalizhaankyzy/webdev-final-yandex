@@ -26,7 +26,7 @@ include 'header.php';
     <?php 
     require('../../connection.php');
     // session_start();
-    $prod_id = 4;
+    $prod_id = $_SESSION['prod_id'];
     $query = "SELECT * FROM `product` WHERE `prod_id` = '$prod_id'";
     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     $rows = mysqli_num_rows($result);

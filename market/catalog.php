@@ -12,7 +12,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="font/font-awesome/css/font-awesome.min.css">      
         <?php
-        session_start();
+        // session_start();
         ?>
     </head>
     <body>
@@ -69,9 +69,9 @@
                                             </ul>
                                             <ul>
                                                 <a href="index.html">Электроника</a>
-                                                <li><a href="">Смартфоны</a></li>
-                                                <li><a href="">Умные часи и браслеты</a></li>
-                                                <li><a href="">Наушники и гарнитуры</a></li>
+                                                <li><a href="category_smartphones.php">Смартфоны</a></li>
+                                                <li><a href="category_watches.php">Умные часы и браслеты</a></li>
+                                                <li><a href="category_headphones.php">Наушники и гарнитуры</a></li>
                                                 <li><a href="">Портативная акустика</a></li>
 
                                             </ul>
@@ -109,7 +109,7 @@
                                             <ul>
                                                 <a href="index.html">Смартфоны и гаджеты</a>
                                                 <li><a href="category_smartphones.php">Смартфоны</a></li>
-                                                <li><a href="category_watches.php">Умные часи и браслеты</a></li>
+                                                <li><a href="category_watches.php">Умные часы и браслеты</a></li>
                                                 <li><a href="category_headphones.php">Наушники и гарнитуры</a></li>
                                                 <li><a href="">Кнопочные телефоны</a></li>
 
